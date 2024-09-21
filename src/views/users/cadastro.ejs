@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Cadastrar Novo Usuário</h1>
+        <form action="/users" method="POST">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Papel:</label>
+                <select class="form-control" id="role" name="role" required>
+                    <option value="admin">Admin</option>
+                    <option value="user">Usuário</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="is_active">Ativo:</label>
+                <input type="checkbox" id="is_active" name="is_active" value="1" checked>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        <a href="/users" class="btn btn-secondary mt-2">Voltar à lista de usuários</a>
+    </div>
+</body>
+</html>
